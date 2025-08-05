@@ -22,7 +22,7 @@ const Filters = () => {
   return (
     <div className="filterContainer">
       <hr style={{ width: "290px", position: "relative", right: "70px", top: "60px" }} />
-      <h2>Filters</h2>
+      <h1>Filters</h1>
 
       <div className="filterSection">
         <h2>Men</h2>
@@ -50,9 +50,9 @@ const Filters = () => {
           </label>
         ))}
       </div>
-
+      <hr style={{ width: "290px", position: "relative", right: "70px", top: "5px" }} />
       <div className="filterSection">
-        <h3>Brand</h3>
+        <h2>Brand</h2>
         {[
           'Abhishit', 'Aditi Wasan', 'Aero Armour', 'Aatman', 
           'Wales Bonner', 'Leather', 'Aangan', 'Arvind'
@@ -66,9 +66,10 @@ const Filters = () => {
           </label>
         ))}
       </div>
+      <hr style={{ width: "290px", position: "relative", right: "70px", top: "5px" }} />
 
-      <div className="filterSection">
-        <h3>Discount</h3>
+       <div className="filterSection1">
+        <h2>Price</h2>
         {['70% and above', '60% and above', '50% and above', '40% and above'].map((discount) => (
           <label key={discount}>
             <input
@@ -80,24 +81,42 @@ const Filters = () => {
         ))}
       </div>
 
+      <hr style={{ width: "290px", position: "relative", right: "70px", top: "5px" }} />
+
       <div className="filterSection">
-        <h3>Color</h3>
+        <h2>Discount</h2>
+        {['70% and above', '60% and above', '50% and above', '40% and above'].map((discount) => (
+          <label key={discount}>
+            <input
+              type="checkbox"
+              onChange={() => handleCheckboxChange('discount', discount)}
+            />
+            {discount}
+          </label>
+        ))}
+      </div>
+      <hr style={{ width: "290px", position: "relative", right: "70px", top: "5px" }} />
+
+      <div className="filterSection">
+        <h2>Color</h2>
         {[
           'Red', 'Gray', 'Brown', 'Green', 'Purple', 
           'Yellow', 'Blue', 'Olive', 'Black'
         ].map((color) => (
           <label key={color}>
-            <input
-              type="checkbox"
-              onChange={() => handleCheckboxChange('color', color)}
-            />
-            {color}
+            <div className="coloroption">
+              <input
+                type="checkbox"
+                onChange={() => handleCheckboxChange('color', color)}
+              />
+              {color}
+            </div>
           </label>
         ))}
       </div>
-
+      <hr style={{ width: "290px", position: "relative", right: "70px", top: "5px" }} />
       <div className="filterSection">
-        <h3>Material</h3>
+        <h2>Material</h2>
         {[
           'Cotton', 'Polyester', 'Silk', 'Metal', 
           'Nylon', 'Acetate', 'Leather', 'Polycotton', 'Denim'

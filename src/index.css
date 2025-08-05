@@ -29,3 +29,33 @@
 input[type='checkbox'] {
   margin-right: 8px;
 }
+
+.coloroption {
+  display: flex;
+  align-items: center;
+
+}
+input[type='checkbox'] {
+  margin-right: 8px;
+}
+
+.coloroption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.colorBox {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  display: inline-block;
+}
+
+
+
+
+/* price filter styles */
+
